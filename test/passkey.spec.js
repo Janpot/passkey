@@ -7,7 +7,7 @@ var Promise = require('bluebird');
 
 describe('passkey', function () {
 
-  var client = redis.createClient({ host: '192.168.59.103', port: 6379 });
+  var client = redis.createClient(require('./config'));
   var keychain = passkey(client);
 
   beforeEach(function () {

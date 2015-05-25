@@ -1,4 +1,10 @@
-# passkey
+# passkey [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+
+[travis-url]: http://travis-ci.org/Janpot/passkey
+[travis-image]: http://img.shields.io/travis/Janpot/passkey.svg?style=flat
+
+[depstat-url]: https://david-dm.org/Janpot/passkey
+[depstat-image]: http://img.shields.io/david/Janpot/passkey.svg?style=flat
 
 Shared lock built on top of [then-redis](https://www.npmjs.com/package/then-redis)
 
