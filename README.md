@@ -1,4 +1,4 @@
-# passkey [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# passkey
 
 [travis-url]: http://travis-ci.org/Janpot/passkey
 [travis-image]: http://img.shields.io/travis/Janpot/passkey.svg?style=flat
@@ -9,6 +9,8 @@
 Shared lock built on top of [then-redis](https://www.npmjs.com/package/then-redis)
 
 Reliable locking mechanism on Redis. Performs atomic locking and verifies ownership.
+
+[![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
 
 ## Usage
 
