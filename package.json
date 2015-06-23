@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "bluebird": "^2.9.25",
-    "then-redis-scripts": "^1.0.0",
+    "then-redis-scripts": "^1.1.0",
     "uuid": "^2.0.1"
   }
 }
