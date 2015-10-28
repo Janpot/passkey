@@ -6,7 +6,7 @@
 [depstat-url]: https://david-dm.org/Janpot/passkey
 [depstat-image]: http://img.shields.io/david/Janpot/passkey.svg?style=flat
 
-Shared lock built on top of [then-redis](https://www.npmjs.com/package/then-redis)
+Shared lock built on top of [redis](https://www.npmjs.com/package/redis)
 
 Reliable locking mechanism on Redis. Performs atomic locking and verifies ownership.
 
@@ -15,7 +15,7 @@ Reliable locking mechanism on Redis. Performs atomic locking and verifies owners
 ## Usage
 
 ```js
-var redis = require('then-redis');
+var redis = require('redis');
 var passkey = require('passkey');
 
 var client = redis.createClient();
@@ -49,7 +49,7 @@ key.lock('my-lock')
 
 `var key = passkey(client, [options])`
 
-creates a new key that can be used to set locks, expects to be called with a `then-redis` client.
+creates a new key that can be used to set locks, expects to be called with a `redis` client.
 Options can be an object with following properties
 
  * `ttl`: time before the lock automatically expires, default: 10000ms

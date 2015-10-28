@@ -1,9 +1,12 @@
 'use strict';
 
-var redis = require('then-redis');
+var Promise = require('bluebird');
+var redis = require('redis');
 var assert = require('chai').assert;
 var passkey = require('..');
-var Promise = require('bluebird');
+
+Promise.promisifyAll(redis.RedisClient.prototype);
+Promise.promisifyAll(redis.Multi.prototype);
 
 describe('passkey', function () {
 
@@ -13,7 +16,7 @@ describe('passkey', function () {
   var keychain = passkey(client);
 
   beforeEach(function () {
-    return client.flushall();
+    return client.flushallAsync();
   });
 
   it('shouldn\'t error when no ttl', function () {
