@@ -65,8 +65,10 @@ returns a `Lock` instance.
 
 Release this lock so it can be obtained by another client. Fails with a `promise.LockError` if the lock is expired.
 
-`Lock.ttl(ttl)`
+`Lock.ttl([ttl])`
 
-Set a new ttl on this lock. This is useful to extend the lifetime of the lock. Fails with a `promise.LockError` if the lock is expired.
+Set a new ttl on this lock. This is useful to extend the lifetime of the lock. Fails with a `promise.LockError` if the lock is expired. Returns the current ttl when called without arguments.
 
+`Lock.extend()`
 
+Extends the ttl of the current lock with last used ttl.
